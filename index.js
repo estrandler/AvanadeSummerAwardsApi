@@ -15,15 +15,12 @@ app.use(bodyParser.json());
 app.use(function (req, res, next) {
     res.set({ 'content-type': 'application/json; charset=utf-8' });
     next();
-})
-
-app.use('/api', router);
+});
 
 var port = process.env.port || 8080;
-
-
-
 var router = express.Router();
+
+app.use('/', router);
 
 
 router.get('/category', function (req, res) {
