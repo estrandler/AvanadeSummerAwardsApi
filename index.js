@@ -36,8 +36,6 @@ router.get('/category/', function (req, res) {
     })
 });
 
-app.use('/api', router);
-
 app.listen(port);
 
 
