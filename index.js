@@ -17,6 +17,8 @@ app.use(function (req, res, next) {
     next();
 })
 
+app.use('/', router);
+
 var port = process.env.port || 8080;
 
 
@@ -39,7 +41,6 @@ router.get('/category', function (req, res) {
     })
 });
 
-app.use('/api', router);
 
 app.listen(port);
 
