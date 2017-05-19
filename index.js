@@ -17,7 +17,7 @@ app.use(function (req, res, next) {
     next();
 })
 
-app.use('/', router);
+app.use('/api', router);
 
 var port = process.env.port || 8080;
 
