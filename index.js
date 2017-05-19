@@ -21,7 +21,7 @@ var port = process.env.port || 8080;
 var router = express.Router();
 
 
-router.get('/category/', function (req, res) {
+router.get('/category', function (req, res) {
     var client = docdbUtils.getClient(config.host, config.authKey);
     var querystring = {
         query: 'SELECT * FROM root'
@@ -35,6 +35,8 @@ router.get('/category/', function (req, res) {
         })
     })
 });
+
+app.use('/api', router);
 
 app.listen(port);
 
