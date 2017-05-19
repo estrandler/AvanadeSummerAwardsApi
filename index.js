@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -5,7 +7,6 @@ var config = require("./config");
 var url = require('url');
 var DocumentDBClient = require('documentdb').DocumentClient;
 var docdbUtils = require('./docdbUtils');
-
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -17,6 +18,8 @@ app.use(function (req, res, next) {
 })
 
 var port = process.env.port || 8080;
+
+
 
 var router = express.Router();
 
