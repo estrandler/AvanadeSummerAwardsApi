@@ -1,7 +1,8 @@
 var config = {};
+var localEnv = require('./localenv');
 
- config.host = process.env.HOST || "https://avanadesummerawards.documents.azure.com:443/";
- config.authKey = process.env.AUTH_KEY || "GJ9ql8ywVWlJb8VwyRCZrTSevC5h1sOcZkeRBmaeVfsVRz26SgFYHt95MxA52j0kMJb5j9UZYBrMn80NXJ4wSA==";
+ config.host = process.env.HOST || localEnv.host;
+ config.authKey = process.env.AUTH_KEY || localEnv.authKey;
  config.databaseId = "avanadesummerawards";
  config.collectionId = "Category";
 
