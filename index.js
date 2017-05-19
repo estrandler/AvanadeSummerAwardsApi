@@ -22,7 +22,7 @@ var router = express.Router();
 
 
 router.get('/category', function (req, res) {
-    var client = docdbUtils.getClient(config.documentdb_host, config.authKey);
+    var client = docdbUtils.getClient(config.DOCUMENTDB_HOST, config.authKey);
     var querystring = {
         query: 'SELECT * FROM root'
     }
